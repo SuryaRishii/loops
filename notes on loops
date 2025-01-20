@@ -1,0 +1,42 @@
+loops:
+
+1)for loop
+2)while loop
+3)do-while loop
+
+
+1)for loop:
+syntax:
+for(initialisation; condition ; update-expression{
+----block of code
+}
+
+for(let i=2;i<=9 ;i=i+2){
+          console.log(i+3);
+}
+for(let i=2;i<=9;i=i+2){
+            console.log(i+3);
+            /*i=2; 2<=9; i=2+2=4
+            -----2+3=5
+            i=4; 4<=9; i=4+2=6
+            -----4+3=7
+            i=6; 6<=9; i=6+2=8
+            -----6+3=9 
+            i=8; 8<=8; i=8+2=10
+            -----8+3=11*/
+        }
+
+#10-15
+#i=1 ;2;3;4;5;6
+#c=1<=5; 2<=5;3<=5;4<=5;5<=5;6<=5; #F
+#u=i++ =i=i+1 ; 1+1=2; 3 ; 4; 5; 5+1=6
+#b =1; 2; 3; 4; 5
+1-5
+
+#chiru repeat #5 times
+# 9 x 1 =9------9 x 10 = 90 9th table
+i=2;
+C=2<=9 ; 4<=9 ;6<=9 ;8<=9 ;10<=9 #F
+U= i=i+2;  2+2=4; 4+2=6; 6+2=8; 8+2+10;
+#B=i+3 ;  2+3=5;  4+3=7;  6+3=9  ;8+3=11
+#5,7,9,11
