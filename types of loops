@@ -1,0 +1,64 @@
+21/01/25
+For in 
+#character
+Const a= “ramya”
+For(let I in a){
+Console.log(a[i]);
+}
+Arrays:
+For of :
+const b= [“ramya”,”sam”,”kavya”]
+for(let bb of b){
+console.log(b[bb])
+}
+While loop
+--for loop
+--inifinite(unknown)
+Ex:1-5
+let i=1,n=5;
+while(i<=n){
+console.log(i)
+i=i+1
+}
+let i = 2,n=8;
+while(i<=n){
+console.log(i)
+i=i+2
+}
+Output:
+3 5 7 9
+Do while loop
+let c=0;
+do{
+    console.log("count is :"+c);
+    document.write("count is :"+c+"<br>")
+    c++
+}while(c<5);
+
+
+Output:
+count is :0
+count is :1
+count is :2
+count is :3
+count is :4
+
+Example:
+for(let i=1;i<8;i++){
+    if(i==4){
+        break;
+    }
+    console.log(i)
+    document.write(i)
+}
+Output:
+123
+for(let i=2;i<=8;i+1){
+    if(i>4){
+        break;
+    }
+    console.log(i+1)
+    
+}
+Output:
+3 5
