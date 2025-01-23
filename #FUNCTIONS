@@ -1,0 +1,139 @@
+date: 23/01/2025
+
+Functions:
+A function is a reusable block of code.
+It can call any where in the program.
+Reusable code: using the existing code without writing it ever we need
+You can use the same code with different arguments to get the results.
+JS:
+Key-word = function
+( )
+PARAMETERS: = values (variables) which are declared inside the () while defining the a functions.
+Arguments: values which are passed through the parameters at the time of calling the function
+//function example
+function greet(){
+            document.write("hello","<br>")
+        }
+        greet()
+        document.write("hiii","<br>")
+        greet()
+        document.write("gm","<br>")
+        greet()
+
+
+
+//ex:function with paramters :
+
+functiong(name){
+  console.log("Hello"+name)
+}
+let name=prompt("Enter Your Name?")
+g(Name)
+
+
+
+//fUNCTION RETURN:
+--The return statement can be used to return the value to function call.
+Example:
+function a(aa,bb){
+  return aa+bb:
+}
+let n1=parseFloat(prompt("enter a number1"))
+let n2=parseFloat(prompt("enter a number2"))
+
+//calling a function
+let result = a(n1,n2);
+
+//display the result:
+
+console.log("The sum is:" +result)
+
+#write a program to check given number is prime or not 
+#0 1 1 2 3 5 8 13 =fibno
+#leap year
+#armstrong number
+#palidron # 1 21  # 1 2 1
+#Pattern
+#1 2 6
+
+
+
+//CODE:
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function greet(){
+        //     console.log("Hello, World!");
+        // }
+        // greet()
+        // console.log("Hi gaiz")
+        // greet
+        // function g(name){
+        //     console.log(Hello, ${name}!);
+        // }
+        // let name=prompt("Enter your name")
+        // g(name)
+        // function add(){
+        //     let a = parseInt(prompt("Enter the first number")); //can also use float
+        //     let b= parseInt(prompt("Enter the second number"));
+        //     document.write(a+b);
+        // }
+        // add()
+        //alternate
+        // function add(a,b){
+        //     return(a+b)
+        // }
+        // let a=parseInt(prompt("Enter the first number:"));
+        // let b=parseInt(prompt("Enter the second number:"));
+        // document.write(add(a,b))
+        // function primeornot(number){
+        //     let number=parseInt(prompt("Enter the number"));
+        //     if(number<1){
+        //         return("Invalid number");
+        //     }
+        //     else{
+        //         for(let i=2;i<number;i++){
+        //             if(number%i==0){
+        //                 return("Not a prime number");
+        //                 }
+        //             else{
+        //                 return("Prime number");
+        //             }
+        //     }
+        // }        }
+        // Armstrong number
+        // function armstrong(number) {
+        //     let number = parseInt(prompt("Enter the number"));
+        //     let num = number;
+        //     let sum = 0;
+        //     let power = 3;
+        //     while (num != 0) {
+        //         let remainder = num % 10;
+        //         sum += Math.pow(remainder, power);
+        //         num = Math.floor(num / 10);
+        //         }
+        //         if (sum == number) {
+        //             return "Armstrong number";
+        //             }
+        //             else {
+        //                 return "Not an Armstrong number";
+        //                 }
+        // }
+        function leapOrNot(year){
+            let year=parseInt(prompt("Enter the year"));
+            if(year%4==0 && year%100==0 && year%400==0){
+                document.write(${year} is a leap year);
+            }
+        }
+    </script>
+</body>
+</html>
