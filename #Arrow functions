@@ -1,0 +1,131 @@
+
+date:24/01/2025
+
+Arrow Functions:
+--Es6 version
+--more readable and more structure
+--anonymous functios (lambda Functions)
+--without function name but they are assigned top a variable
+
+exmaple:
+Arrow functions with out parameter
+let C=()=>{
+  console.log("Hi Rishii")
+}
+c()
+
+Arrow functionwith parameter:
+Example:
+   let c=(x,y)=>{
+  console.log(x+y)
+}
+c(20,30)
+c(40,50)
+
+//Arrow functionwith ine arguments
+#withoutusing paranthesis
+
+let greet=x =>console.log(x);
+greet('hello')
+
+//Arrow function without argument
+
+let greet=() =>console.log("hello")
+greet()
+
+Example:Arrow functions as an expression
+(consition)? E1 : E2
+let age = 18;
+let welcome =(age<18)?
+()=>console.log("hi Surya");
+()=>console.log("hi Rishii");
+welcome()
+
+//
+ function task1(){
+            console.log("Task1 : start")
+        }
+        function task2(){
+            console.log("Task2 : start")
+        }
+        function task3(){
+            console.log("Task3 : start")
+        }
+        task1()
+        task2()
+        task3()
+
+
+//
+console.log("hi Rishii");
+        setTimeout(() => {
+            console.log("hey i am waiting")
+        }
+    ,5000);
+    console.log("i am at lab")
+
+
+//JavaScript Callback:
+A call back function is function that is passed argument to another function.
+Example: function greet(name,callback){
+            console.log("Hello,${Rishii}!")
+            callback();
+        }
+        function sayGoodbye(){
+            console.log("Goodbye")
+        }
+        greet("sam" ,sayGoodbye)
+
+
+
+
+//code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   /*let c=(x,y)=>{
+  console.log(x+y)
+}
+c(20,30)
+c(40,50)
+let age = 18;
+let welcome = (age<18)?
+()=>console.log("hi Surya"):
+()=>console.log("hi Rishii");
+welcome()
+        function task1(){
+            console.log("Task1 : start")
+        }
+        function task2(){
+            console.log("Task2 : start")
+        }
+        function task3(){
+            console.log("Task3 : start")
+        }
+        task1()
+        task2()
+        task3()
+
+        console.log("hi Rishii");
+        setTimeout(() => {
+            console.log("hey i am waiting")
+        }
+    ,5000);
+    console.log("i am at lab")
+        function greet(name,callback){
+            console.log("Hello,${Rishii}!")
+            callback();
+        }
+        function sayGoodbye(){
+            console.log("Goodbye")
+        }
+        greet("sam" ,sayGoodbye)*/ 
+    </script>
+</body>
+</html>
