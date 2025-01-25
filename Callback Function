@@ -1,0 +1,118 @@
+DATE:25/01/2025
+  
+  //Callback:
+  --you can pass the callback function as argument to another function.
+  execution:
+  the function receiving the callback will execute the callback at some point during its 
+  execution
+
+
+ex:
+function mainFunction(callback){
+  console.log("Exceuting main function")
+  callback()//here we call the callback function
+}
+function callbackFunction(){
+console.log("callbackfunction executed")
+}
+mainFunction(callbackFunction)
+
+exp:
+--mainFunction takes a callback as parameter 
+--callbackFunction is passed to main function
+--inside the mainFunction,the callbackfunction,function is called with callback()
+
+
+ex2:passing a Named function as a callback:
+
+  function greet(name,callback){
+  console.log("Hello",+name);
+  callback();
+  }
+  function goodbye(){
+    console.log("is non-dramatic!")
+  }
+  greet("Rishii",goodbye)
+
+ex3:using an anonymous functions as callback:
+ 
+ function greet(name ,callback){
+  console.log("hello+name);
+  callback();
+ }
+ greet("Rishii",function(){
+  console.log("a Python Developer");
+ })
+
+
+Exp:we didn't pass a named function like goodbye;.
+Instead of that we defined an anonymous function directly within the function call.
+
+Ex:4-Asynchronous callback with setTimeout
+
+Asynchronous callback with setTimeout;
+code:
+function fetchData(callback){
+  console.log("Fetching data...")
+  setTimeout(function(){
+  console.log("Data Fetched...");
+  callback();
+},2000);
+ }
+function processData(){
+  console.log("processing the fetched data...")
+}
+fetchData(processData);
+
+
+
+
+//code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    function mainFunction(callback){
+  console.log("Exceuting main function")
+  callback()//here we call the callback function
+}
+function callbackFunction(){
+console.log("callbackfunction executed")
+}
+mainFunction(callbackFunction)
+    function greet(name ,callback){
+        console.log("Hello",+name);
+        callback();
+        }
+    function goodbye(){
+        console.log("is non-dramatic!");
+    }
+    greet("Rishii",goodbye) 
+
+    function greet(name ,callback){
+  console.log("Hello " +name);
+  callback();
+ }
+ greet("Rishii",function(){
+  console.log("A+ Python Developer");
+ })
+ function fetchData(callback){
+  console.log("Fetching data...")
+  setTimeout(function(){
+  console.log("Data Fetched...");
+  callback();
+},2000);
+ }
+function processData(){
+  console.log("processing the fetched data...")
+}
+fetchData(processData);
+    </script>
+</body>
+</html>
