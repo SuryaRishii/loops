@@ -1,0 +1,151 @@
+Date : 27/01/2025
+
+//Promise:
+A Promise is a special javascript object that represents the eventual completion(or failure)
+ of an Asynchronous operation.
+
+ //three states:
+ 1)Pending:
+ This initial state ,the promise is still waiting for th eoperation to finish.
+ 2)Fulfilled:The operation completed successfully
+ 3)Rejected: The operation Failed.
+
+Exp:
+To create a new promise new Promise();
+The promise constructor takes a functionwith two parameters :
+Resolve --to mark as the promise is successful
+Reject --to mark it as Failed.
+
+//Handling:
+.then() method is called when the promise is fulfilled.
+--It recieves the result from resolve();
+.catch() method is called when promise is Rejected.
+--It receives the result form the reject();
+Ex:
+let myPromise =new Promise((resolve ,reject)=>{
+  let success =true;
+  if(success){
+    resolve("The Operation was successfully")
+  }else{
+    reject("The Operation failed")
+  }
+});
+myPromise
+.then(result=>{
+  console.log(result)
+})
+.catch(error=>{
+  Console.log(error)
+})
+
+
+//Chaining Promises:
+--you can have chain multiple .then()
+
+Ex:
+
+let promise =new Promise((resolve, reject) =>{
+  resolve(5);
+  //initial resolved value is 5
+})
+promise.then(result=>{
+  console.log(result);
+  return result +3;
+})
+.then(result=>{
+    console.log(result)
+})
+.catch(error=>{
+    console.log("error" ,error)
+})
+
+1)Promise with setTimeout:
+--using setTimeout the promise will resolve after certain amount of time.
+
+Ex:
+
+let myPromise=new Promise((resolve,reject)=>{setTimeout(()=>{
+            let success=true 
+            if (success){
+                resolve("The operation was successful")
+            } else{
+                reject("The operation was failed")
+            }
+          },5000);
+        });
+        console.log("Executing myPromise...");
+        myPromise
+        .then(result=>{
+            console.log(result)
+        })
+        .catch(error=>{
+            console.log(error)
+        });
+
+
+
+
+
+
+//code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* let myPromise =new Promise((resolve ,reject)=>{
+  let success =true;
+  if(success){
+    resolve("The Operation was successfully")
+  }else{
+    reject("The Operation failed")
+  }
+});
+myPromise
+.then(result=>{
+  console.log(result)
+})
+.catch(error=>{
+  Console.log(error)
+})
+let promise =new Promise((resolve, reject) =>{
+  resolve(5);
+  //initial resolved value is 5
+})
+promise.then(result=>{
+  console.log(result);
+  return result +3;
+})
+.then(result=>{
+    console.log(result)
+})
+.catch(error=>{
+    console.log("error" ,error)
+})*/ 
+let myPromise=new Promise((resolve,reject)=>{setTimeout(()=>{
+            let success=true 
+            if (success){
+                resolve("The operation was successful")
+            } else{
+                reject("The operation was failed")
+            }
+          },5000);
+        });
+        console.log("Executing myPromise...");
+        myPromise
+        .then(result=>{
+            console.log(result)
+        })
+        .catch(error=>{
+            console.log(error)
+        });
+
+    </script>
+</body>
+</html>
+
+
