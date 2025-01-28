@@ -1,0 +1,97 @@
+
+
+//THEORITICAL INFORMATION:
+
+    Date:28/01/2025
+
+    //DOM (DOCUMENT OBJECT MODEL)
+    --Its a programming interface in web development that allows us to 
+    interact and manipulate(change) the html documents.
+
+    --When the webpage is loaded , the browser creates the DOM of the webpage.
+    
+    --When an html file is loaded into the brower, the javascript cannot understand 
+    the html document directly.
+    
+
+    DOM : it is basically the representation of the same html document but in a tree-like structure composed
+    of objects.
+
+    HTML DOM : It allow javascript to access(to get) and modify all the elements in HTML Document.
+
+Keypoints:
+1.Structure: the DOM represents the structure of html document as tree; each node in a tree represents the element , an attribute, text
+2.Manipulation: using js, you can interact with elements like buttons, headings, paragraphs.
+3.Event handling:
+4.W3C: world wide web cosortium
+
+<html>
+<head>
+<body>  
+…content in a tree like structure
+
+</body>
+</<head>
+</html>
+
+In dom all html elements are defined objects
+Property: value that you can set to the objects(like changing content of a html element)
+Method: an action(like adding or deleting)
+
+Methods of DO:
+1.Getting element by id
+2.Getting element by class: returns all the elements having the same class name, return in the form of a html collection object
+3.Getting an element by tagname
+4.Getting an element by query selector.
+
+
+
+//CODE:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            color: red;
+        }
+        .b{
+            color: navy;
+        }
+        .c{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="a" class="b">Akshith</h1>
+    <h1 class="b" id="b">Rishi</h1>
+    <h1 class="b" id="c">Nithin</h1>
+    <h1 class="b">Jayadeep</h1>
+    <h1 class="c">Sreenath</h1>
+    <h1 class="a">Hrushi</h1>
+    <h1 class="a">Phani</h1>
+    <h1 class="a">Badulla</h1>
+    <h1 class="c">Sri</h1>
+
+    <script>
+        let x=document.getElementsByClassName('a');
+        console.log(x);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
