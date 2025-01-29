@@ -1,0 +1,126 @@
+Date:29/01/25
+
+Get Elements by clas:
+Returns the all the elements having the same class namename
+getElementByClassName() ---method returns an html collection object
+--an html collection is array like list of html elements.
+--length property provides the size the collections
+Example:
+        <h1 class = "a">ravi </h1>
+        <h1 class = "b">sai </h1>
+        <h1 class = "a">mani </h1>
+        <script>
+        let x=document.getElementsByClassName('a')
+        for(let i = 0; i < x.length; i++) {
+            console.log(x[i])}
+ Get Elements by tag name:
+Example:
+<h3 class = "a">ravi </h1>
+        <h1 class = "b">sai </h1>
+        <h2 class = "a">mani </h1>
+        <h1 class = "b">nithin </h1>
+        <script>
+        let x=document.getElementsByTagName('h1')
+        console.log(x)
+        for(let i = 0; i < x.length; i++) {
+            console.log(x[i])
+        }  
+</script>
+
+Queryselector methods:
+1)	queryselector:
+---it is used select html elements by its classname and tagnames;
+--- it select only the first element .
+Example:
+<h3 class = "a">ravi </h3>
+        <h1 class = "b">sai </h1>
+        <h2 class = "a">mani </h2>
+        <h1 class = "b">nithin </h1>
+        <script>
+        let x=document.querySelector('h1')
+        console.log(x)
+
+output:         <h1 class = "b">sai </h1>
+
+2)	queryselector all:
+---it can be used to select html elements by its tagname or classname.
+---it return in the form of 
+---it return a nodelist when is an array like object.
+
+Example:
+ <h3 class = "a">ravi </h3>
+        <h1 class = "b">sai </h1>
+        <h2 class = "a">mani </h2>
+        <h1 class = "b">nithin </h1>
+        <script>
+        let x=document.querySelectorAll('h1')
+        console.log(x)
+        // for(let i = 0; i < x.length; i++) {
+        //     console.log(x[i])
+        // }
+       
+</script>
+
+
+Manipulate the elements:
+ --to create a html element 
+>createElement()
+>document.createElement()
+>the method takes an html element tag name as string parameter
+
+Example:
+
+let t=document.createElement('h2')
+       t.className="tt"
+       t.textContent="i am in hyd"
+       console.log(t)
+
+tocreatemultipleelements:
+example:
+<h3 class = "a">ravi </h3>
+        <h1 class = "b">sai </h1>
+        <h2 class = "a">mani </h2>
+        <h1 class = "b">nithin </h1>
+        <script>
+    const t=["nithin","sai","mani","ravi"]
+    for(let i = 0; i < t.length; i++) {
+        let tt = document.createElement('h2')
+        tt.className = "aa"
+        tt.textContent=t[i]
+        console.log(tt)
+    }
+</script>
+
+
+//example:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .a{
+        color: aqua;
+      }
+    </style>
+</head>
+<body>
+
+  <h1 class="a" id="a">Hello</h1>
+  <h1 class="a" id="b">hola</h1>
+  <h1 class="b" id="c">Namaste</h1>
+    <script>
+        // let js = document.getElementById('a');
+        // console.log(js);
+        // let q = document.getElementsByClassName('a');
+        // console.log(q);
+
+        let k = document.createElement('h1');
+        k.className = 'b';
+        k.textContent = 'Hello';
+        console.log(k)
+        document.body.appendChild(k);
+    </script>
+</body>
+</html>
