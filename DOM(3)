@@ -1,0 +1,72 @@
+ Date:31/01/2025
+
+  //CODE
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title><div id="a">
+    <h1>SURYA</h1>
+    <h1>RISHII</h1>
+</div>
+<div id="b">
+    <h2>LISA</h2>
+    <h2>JESSI</h2>
+</div>
+<script>
+    let n=document.createElement('h1');
+    n.textContent="SARENA";
+
+    let p = document.getElementById('a');
+    let l = document.getElementById('r');
+    p.insertBefore(n,l)
+</script>
+</head>
+<body>
+ 
+  </script>
+</body>
+</html>
+
+//EXAMPLE:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="a">
+    <h1 id="s">SURYA</h1>
+    <h1 id ="r">RISHII</h1>
+    <h1></h1>
+  </div>
+    <div id="b">
+      <h2>KRISH</h2>
+      <h2 id="d">BALU</h2>
+    </div>
+  <script>
+    let n=document.createElement('h1')
+    let c=document.createElement('h1')
+    c.textContent='THOMAS'
+    n.textContent='BEULA'
+
+    let h=document.createElement('h2')
+    h.textContent='RAGHUNATH'
+
+    let p=document.getElementById('a')
+    let j=document.getElementById('s')
+    let l=document.getElementById('r')
+    
+    let pp=document.getElementById('b')
+    let e=document.getElementById('d')
+    p.insertBefore(c,l)
+    p.insertBefore(n,j)
+    pp.insertBefore(h,e)
+  </script>
+</body>
+</html>
