@@ -70,3 +70,19 @@
   </script>
 </body>
 </html>
+<body>
+  <div id="a">
+    <h1 id="s">Ravi</h1>
+    <h1 id ="r">Ram</h1>
+    <h1></h1>
+  </div>
+    <div id="b">
+      <h2>Sam</h2>
+      <h2 id="d">Venkat</h2>
+    </div>
+  <script>
+
+    let p=document.getElementById("a")
+    let o=document.getElementById("s")
+    console.log(o)
+    p.removeChild(o)
