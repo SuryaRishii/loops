@@ -1,0 +1,66 @@
+Date:01/02/2025
+
+
+//Scenerio 1:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let age = parseInt(prompt("Enter your age:"))
+        
+        if(age>=18 ){
+            let citizen = confirm("Are you a citizen?")
+        let passedCitizenTest = confirm("Have you passed citizen test?")
+            document.write("You are eligible to vote")
+            
+            if(age>=18 && !citizen && passedCitizenTest){
+                document.write("You are eligible to vote")
+            }
+            
+        }else{
+            document.write("You are not eligible to vote")
+        } 
+            </script>
+</body>
+</html>
+
+
+
+              //scenerio:
+  <script>
+    //a customer who spends more than 100 gets 20% off
+    //a customer who spends more than 50 rupees but less than or equal to 100 gets a 10% discount
+    //if the customer is premium member they receive an extra 5% discount
+    let total = parseFloat(prompt("Enter the total amount"))
+    let isPremium = confirm("Are you a premium member?")
+    
+    let isEligible = false
+    let discount = 0
+    if( total>100){
+        isEligible = true
+        discount = 0.2
+    }else if( total>50 && total<=100){
+        isEligible = true
+        discount = 0.1
+    }
+    if(isEligible && isPremium){
+        discount += 0.05
+    }
+    if(isEligible){
+        let discountAmount = total * discount
+        let remainingAmount = total - discountAmount
+        document.write("You are eligible for a discount of " + discount*100 + "%")
+        document.write("<br>Original  Amount: " + total)
+        document.write("<br>Discount Amount: " + discountAmount)
+        document.write("<br>Remaining Amount: " + remainingAmount)
+    }else{
+        document.write("You are not eligible for a discount")
+    }
+</script>
