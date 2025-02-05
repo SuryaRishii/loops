@@ -1,0 +1,72 @@
+05/02/25
+---create an element in react js
+---react.createElement()
+Syntax:
+Type =tag name(h1 , p , div)
+Prop = class , id
+reactDOM.createRoot() -to render the element
+Example:
+<div id ="app"></div>
+    <script >
+        const n=React.createElement('h1',{id:"c"},"I am Nithin")
+        const e=document.getElementById('app')
+        const root=ReactDOM.createRoot(e)
+        root.render(n)
+    </script>
+
+JSX:
+--javaScript XML
+---it is a syntax exentions for javascript
+---jsx allows us to write HTML code in react js
+---jsx all the html tags must be closed
+--jsx complies the html code to js
+--babel is tool in jsx.
+Example:
+  <div id="a"></div>
+    <script type="text/babel">
+        const element=<h1 className="aa">welcome to react App</h1>;
+        const e=document.getElementById('a')
+        const root=ReactDOM.createRoot(e)
+        root.render(element);
+    </script>
+Example for expressions:
+ <div id="a"></div>
+    <script type="text/babel">
+        const n= 5;
+        const m=<h1>React is {n*2} better than JSX </h1>;
+        const e=document.getElementById('a')
+        const root=ReactDOM.createRoot(e)
+        root.render(m);
+    </script>
+Coditional Rendering:
+Example:
+ <div id="root"></div>
+    <script type="text/babel">
+        const App=()=>{
+            const isloggedIn=true;
+            return(
+            <div>
+                {isloggedIn?<h1>welcome back ,user </h1>:<h1>please login</h1>}
+                {isloggedIn && <h1>you have a new notification </h1>}
+                </div>
+            ) }
+        const root=ReactDOM.createRoot(document.getElementById('root'))
+        root.render(<App/>);</script>
+functions:
+--using  a function call
+--it can also use a function call directly within the JSX expressions.
+Example:
+ <div id="a"></div>
+    <script type="text/babel">
+        function getGreeting(name){
+            return Hello, ${name} ! welcome to React
+        }
+        function Greeting(){
+            const name = 'Nithin';
+            return <h1>{getGreeting(name)}</h1>
+        }
+#calling the function in JSX
+#create a root and render  the Greeting componenet
+        const root=ReactDOM.createRoot(document.getElementById('a'))
+        root.render(<Greeting/>);
+    </script>
