@@ -1,6 +1,23 @@
 Date:06-02-2025
 
-//code(APP.JS)
+//Syntax(APP.JS)
+import React from 'react';
+import './App.css';
+
+const Welcome =(props)=>{
+    const{name, greeting}=props
+
+    return(
+        <h1 className='message'>
+            {greeting}, {name}
+        </h1>
+    )
+}
+
+export default Welcome;
+
+//code:
+
 import React from 'react';
 import './App.css';
 
