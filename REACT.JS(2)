@@ -1,0 +1,66 @@
+Date:- 07-02-2025
+
+//greetings code:
+
+
+import React from 'react';
+
+function Greeting({isLoggedIn}){
+    if(isLoggedIn){
+        return <h1>Welcome Back!</h1>
+    }else{
+        return <h1>Please Login</h1>
+    }
+}
+
+export default Greeting;
+
+//
+import React from 'react';
+import Greeting from './greeting.js';
+import "./App.css"
+
+const App=()=>{
+  const isLoggedIn=true;
+  return(
+    <div className='App'>
+      <Greeting isLoggedIn={isLoggedIn}/>
+    </div>
+  )
+}
+
+export default App;
+
+//Fruits.js code:
+
+import React from "react";
+const FruitList=()=>{
+    const fruits = ['apple','cherry','orange','grapes'];
+    return(
+        <div>
+            <h1>Fruits List</h1>
+            <ul>
+                {fruits.map((fruit,index)=>(
+                    <li key={index}>{fruit}</li>
+                ))}
+            </ul>
+        </div>
+    )
+}
+
+export default FruitList;
+
+//
+import React from 'react';
+import "./App.css"
+import FruitList from './fruits';
+
+const App=()=>{
+  return(
+    <div className="">
+      <FruitList/>
+    </div>
+  )
+}
+
+export default App;
