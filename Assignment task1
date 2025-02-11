@@ -1,0 +1,100 @@
+Date:11-02-2025:
+
+//task1 code profilecard.js
+
+import React from "react";
+import "./App.css";
+
+const ProfileCard = ({ name, greeting, imageSrc }) => {
+  return (
+    <div className="profile-card">
+      <img src={imageSrc} alt={name} />
+      <h2>{name}</h2>
+      <p>{greeting}</p>
+    </div>
+  );
+};
+
+export default ProfileCard;
+
+//task1 code App.js:
+
+import React from "react";
+import ProfileCard from "./ProfileCard";
+import "./App.css";
+
+const App = () => {
+  const users = [
+    {
+      name: "Mahesh Babu",
+      greeting: "Hello, welcome!",
+      imageSrc: "https://tse3.mm.bing.net/th?id=OIP.NiByMxrFLSacGN1U8HGBTgHaJ4&pid=Api&P=0&h=180",
+    },
+    {
+      name: "The Weeknd",
+      greeting: "Nice to meet you!",
+      imageSrc: "https://tse3.mm.bing.net/th?id=OIF.LOfbgpVhNWJa50S%2fXH5cvQ&pid=Api&P=0&h=180",
+    },
+    {
+      name: "Michael Jackson ",
+      greeting: "Have a great day!",
+      imageSrc: "https://images.topmediai.com/topmediai/assets/article/michael-jackson-image.jpg",
+    },
+  ];
+
+  return (
+    <div className="app-container">
+      {users.map((user, index) => (
+        <ProfileCard
+          key={index}
+          name={user.name}
+          greeting={user.greeting}
+          imageSrc={user.imageSrc}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default App;
+
+//task 1 code App.css:
+
+import React from "react";
+import ProfileCard from "./ProfileCard";
+import "./App.css";
+
+const App = () => {
+  const users = [
+    {
+      name: "Mahesh Babu",
+      greeting: "Hello, welcome!",
+      imageSrc: "https://tse3.mm.bing.net/th?id=OIP.NiByMxrFLSacGN1U8HGBTgHaJ4&pid=Api&P=0&h=180",
+    },
+    {
+      name: "The Weeknd",
+      greeting: "Nice to meet you!",
+      imageSrc: "https://tse3.mm.bing.net/th?id=OIF.LOfbgpVhNWJa50S%2fXH5cvQ&pid=Api&P=0&h=180",
+    },
+    {
+      name: "Michael Jackson ",
+      greeting: "Have a great day!",
+      imageSrc: "https://images.topmediai.com/topmediai/assets/article/michael-jackson-image.jpg",
+    },
+  ];
+
+  return (
+    <div className="app-container">
+      {users.map((user, index) => (
+        <ProfileCard
+          key={index}
+          name={user.name}
+          greeting={user.greeting}
+          imageSrc={user.imageSrc}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default App;
