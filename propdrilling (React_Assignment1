@@ -1,0 +1,59 @@
+Date:13-02-2025
+
+//code
+React Assignment on React Context:
+Imagine you are building an app that displays the details of a user's profile.
+The data about the user includes their name and email. The App
+component will pass this user data to a deeply nested child component
+called Profile.
+
+
+‣ In this assignment, you will:
+1. Use Prop Drilling to pass the data from App to Profile.
+2. Use React Context to pass the data directly to Profile without going
+through each component.
+
+
+//code(answer)
+
+import React, { createContext, useContext } from "react";
+import "./App.css"
+// Create context to hold the data
+const DataContext = createContext();
+
+function App() {
+  const data = { name: "Rishii", email: "gsuryarishi@gmail.com" };
+
+  return (
+    // Provide the data to entire application
+    <DataContext.Provider value={data}>
+      <User1 />
+    </DataContext.Provider>
+  );
+}
+
+function User1(){
+  return <User2/>
+}
+
+function User2(){
+  return <User3/>
+}
+
+function User3(){
+  return <Profile/>
+}
+
+// USER 1 COMPONENT
+function Profile() {
+  const userData = useContext(DataContext);
+
+  return (
+    <div className="App">
+      <h1>{userData.name}</h1>
+      <h2>{userData.email}</h2>
+    </div>
+  );
+}
+
+export default App;
