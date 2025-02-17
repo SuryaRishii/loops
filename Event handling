@@ -1,0 +1,83 @@
+Date: 17-02-2025
+
+//code:
+
+import React,{useState} from 'react';
+import './App.css'
+function App(){
+    const[isHovered,setIsHovered]= useState(false);
+    const handleMouseEnter=()=>{
+        setIsHovered(true);
+    }
+    const handleMouseLeave=()=>{
+        setIsHovered(false);
+    };
+    return(
+    <div>
+        <button onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{
+            backgroundcolor:isHovered ?'lightblue':'lightray',
+            color:isHovered ? 'white':'black'
+        }}>hover me</button>
+        {isHovered && <p>mouse is over the button</p>}
+    </div>
+    )
+}
+export default App;
+
+//2nd code:
+
+import React,{ useState } from "react";
+import "./App.css"
+function App(){
+
+  const[isHovered, setIsHovered]=useState(false);
+
+  const handleMouseEnter=()=>{
+    setIsHovered(true);
+  }
+
+  const handleMouseLeave=()=>{
+    setIsHovered(false);
+  }
+
+  return(
+    <div className="App">
+      <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} 
+      style={{backgroundColor:isHovered ? "lightblue" : "lightgray",
+              color:isHovered ? "white" : "black"
+      }}> Hover Me</button>
+
+      {isHovered && <p>Mouse is over the button!</p>}
+    </div>
+    )
+}
+
+export default App;
+
+
+//3rd code:
+
+import React,{ useState } from "react";
+import "./App.css"
+function App(){
+
+  const[key, setKey]=useState("");
+
+  const handleKeyDown=(event)=>{
+    setKey(event.key);
+  }
+
+  return(
+    <div className="App">
+      <h1>Welcome to Keyboard!</h1>
+      {key && <h2>Pressed key : {key}</h2>}
+      <input type="text" onKeyDown={handleKeyDown} placeholder="Press any key"/>
+    </div>
+    )
+}
+
+export default App;
+
+
